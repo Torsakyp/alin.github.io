@@ -9,6 +9,10 @@ body {
   background-color: var(--black);
 }
 
+body.hidden {
+  overflow: hidden;
+}
+
 @font-face {
   font-family: "pr";
   src: url(../fonts/Poppins-Regular.ttf);

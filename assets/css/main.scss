@@ -7,6 +7,9 @@
 body {
     background-color: var(--black);
 }
+body.hidden {
+    overflow: hidden;
+}
 //fonts
 @font-face {
     font-family: "pr";
