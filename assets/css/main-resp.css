@@ -4,6 +4,7 @@
   }
 }
 @media only screen and (max-width: 768px) {
+  .container1080,
   .container1280,
   .container1440 {
     padding: 0px 20px;
@@ -13,6 +14,9 @@
   }
   .link-wrap ul li {
     font-size: 14px;
+  }
+  .link-wrap ul li a::before {
+    width: calc(100% - 17px);
   }
   .link-wrap ul li a::after {
     width: 12px;
@@ -37,6 +41,13 @@
   .front-page .showcase .container1440 {
     margin-bottom: 50px;
   }
+  .front-page .showcase .container1440 .wrap {
+    height: 35px;
+  }
+  .front-page .showcase .container1440 .wrap .scroll .RightToLeft p,
+  .front-page .showcase .container1440 .wrap .scroll .RightToLeft a {
+    font-size: 16px;
+  }
   .front-page .showcase .container1280 .outter-wrap h2 {
     font-size: 24px;
     margin-bottom: 25px;
@@ -53,5 +64,32 @@
   }
   .front-page .contact .container1280 .wrap a {
     font-size: 14px;
+  }
+  .single-page .banner {
+    height: 200px;
+  }
+  .single-page .banner .container1280 .outter-wrap .inner-wrap {
+    margin-bottom: 40px;
+  }
+  .single-page .banner .container1280 .outter-wrap .inner-wrap h2 {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  .single-page .banner .container1280 .outter-wrap .inner-wrap h1 {
+    font-size: 24px;
+  }
+  .single-page .content {
+    padding: 50px 0px;
+  }
+  .single-page .content .container1080 .wrap h2 {
+    font-size: 20px;
+    margin: 10px 0px;
+  }
+  .single-page .content .container1080 .wrap p {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  .single-page .content .container1080 .wrap img {
+    margin: 10px 0px;
   }
 }/*# sourceMappingURL=main-resp.css.map */

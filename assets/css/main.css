@@ -33,6 +33,14 @@ body {
   margin: 0 auto;
 }
 
+.container1080 {
+  max-width: 1160px;
+  height: auto;
+  position: relative;
+  padding: 0px 40px;
+  margin: 0 auto;
+}
+
 .w-100 {
   padding: 0px 0px !important;
 }
@@ -57,6 +65,14 @@ body {
     background-position: 200% center;
   }
 }
+@keyframes RightToLeft {
+  from {
+    transform: translateX(-5%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
 .grid21 {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -70,10 +86,23 @@ body {
   font-family: "pm";
   font-size: 16px;
   color: var(--white);
+  opacity: 0.8;
 }
 .link-wrap ul li a {
   -moz-column-gap: 5px;
        column-gap: 5px;
+  position: relative;
+}
+.link-wrap ul li a::before {
+  content: "";
+  width: calc(100% - 20px);
+  height: 1px;
+  display: block;
+  background: white;
+  transition: 300ms;
+  position: absolute;
+  bottom: -1px;
+  opacity: 0;
 }
 .link-wrap ul li a::after {
   content: "";
@@ -83,6 +112,14 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
   display: block;
+}
+.link-wrap ul li:hover {
+  opacity: 1;
+  transition: all 400ms ease-in-out;
+}
+.link-wrap ul li:hover a::before {
+  opacity: 1;
+  transition: all 400ms ease-in-out;
 }
 
 .project-item {
@@ -168,13 +205,35 @@ body {
 .front-page .showcase {
   height: auto;
   margin-bottom: 100px;
+  overflow: hidden;
 }
 .front-page .showcase .container1440 {
   margin-bottom: 100px;
 }
 .front-page .showcase .container1440 .wrap {
-  background-color: var(--lightwhite);
-  height: 50px;
+  display: flex;
+  align-items: center;
+  height: auto;
+  height: 40px;
+}
+.front-page .showcase .container1440 .wrap .scroll {
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+.front-page .showcase .container1440 .wrap .scroll .RightToLeft {
+  display: flex;
+  gap: 10px;
+  animation: RightToLeft 60s infinite linear;
+}
+.front-page .showcase .container1440 .wrap .scroll .RightToLeft p {
+  font-family: "pr";
+  font-size: 24px;
+  color: var(--superlightwhite);
+}
+.front-page .showcase .container1440 .wrap .scroll .RightToLeft a {
+  font-family: "pm";
+  font-size: 24px;
+  color: var(--white);
 }
 .front-page .showcase .container1280 .outter-wrap h2 {
   font-family: "pr";
@@ -193,6 +252,18 @@ body {
 .front-page .showcase .container1280 .outter-wrap .inner-wrap {
   height: auto;
   gap: 25px;
+}
+.front-page .showcase .container1280 .outter-wrap .inner-wrap .project-item:nth-child(4) .pre {
+  z-index: 1;
+}
+.front-page .showcase .container1280 .outter-wrap .inner-wrap .project-item:nth-child(4) .pre div:nth-child(1) h3 {
+  color: var(--black);
+}
+.front-page .showcase .container1280 .outter-wrap .inner-wrap .project-item:nth-child(4) .pre div:nth-child(1) p {
+  color: rgba(17, 17, 17, 0.6);
+}
+.front-page .showcase .container1280 .outter-wrap .inner-wrap .project-item:nth-child(4) .pre div:nth-child(2) {
+  background-color: rgba(17, 17, 17, 0.2);
 }
 .front-page .contact {
   margin-bottom: 80px;
@@ -226,4 +297,53 @@ body {
   width: -moz-fit-content;
   width: fit-content;
   line-height: 1.6;
+}
+
+.single-page .banner {
+  background-color: #d94b45;
+  height: 365px;
+}
+.single-page .banner .outter-wrap {
+  height: 100%;
+}
+.single-page .banner .outter-wrap .inner-wrap {
+  margin-bottom: 100px;
+}
+.single-page .banner .outter-wrap .inner-wrap h2 {
+  font-family: "pr";
+  font-size: 20px;
+  color: var(--superlightwhite);
+  margin-bottom: 15px;
+}
+.single-page .banner .outter-wrap .inner-wrap h1 {
+  font-family: "pr";
+  font-size: 48px;
+  background: linear-gradient(to right, #d7d7d7 20%, #afa4a4 40%, #8b8989 60%, #d9d9d9 80%);
+  background-size: 200% auto;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 9s linear infinite;
+}
+.single-page .content {
+  padding: 100px 0px;
+}
+.single-page .content .container1080 .wrap h2 {
+  font-family: "pm";
+  font-size: 24px;
+  color: var(--white);
+  margin: 20px 0px;
+}
+.single-page .content .container1080 .wrap p {
+  font-family: "pr";
+  font-size: 16px;
+  color: var(--lightwhite);
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+.single-page .content .container1080 .wrap img {
+  width: 100%;
+  height: auto;
+  margin: 20px 0px;
 }/*# sourceMappingURL=main.css.map */

@@ -7,6 +7,7 @@ header {
     right: 0;
     z-index: 10;
     border-bottom: 1.2px solid var(--superlightwhite);
+    transition: all 500ms ease-in-out;
     .nav {
         padding-top: 20px;
         padding-bottom: 20px;
@@ -31,8 +32,8 @@ header {
             }
             .hamburger {
                 display: none;
-                width: 18px;
-                height: 12px;
+                width: 20px;
+                height: 15px;
                 div {
                     height: 2px;
                     width: 100%;
@@ -41,6 +42,12 @@ header {
             }
         }
     }
+}
+
+header.animate {
+    backdrop-filter: blur(10px);
+    background-color: rgba($color: #a1a1a1, $alpha: 0.2);
+    transition: all 500ms ease-in-out;
 }
 
 footer {

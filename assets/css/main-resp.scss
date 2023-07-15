@@ -10,6 +10,7 @@
 
 @media only screen and (max-width: 768px) {
     //container
+    .container1080,
     .container1280,
     .container1440 {
         padding: 0px 20px;
@@ -25,6 +26,9 @@
         ul {
             li {
                 font-size: 14px;
+                a::before {
+                    width: calc(100% - 17px);
+                }
                 a::after {
                     width: 12px;
                     height: 12px;
@@ -66,6 +70,17 @@
             margin-bottom: 40px;
             .container1440 {
                 margin-bottom: 50px;
+                .wrap {
+                    height: 35px;
+                    .scroll {
+                        .RightToLeft {
+                            p,
+                            a {
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
             }
             .container1280 {
                 .outter-wrap {
@@ -91,6 +106,43 @@
                     }
                     a {
                         font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+    .single-page {
+        .banner {
+            height: 200px;
+            .container1280 {
+                .outter-wrap {
+                    .inner-wrap {
+                        margin-bottom: 40px;
+                        h2 {
+                            font-size: 14px;
+                            margin-bottom: 10px;
+                        }
+                        h1 {
+                            font-size: 24px;
+                        }
+                    }
+                }
+            }
+        }
+        .content {
+            padding: 50px 0px;
+            .container1080 {
+                .wrap {
+                    h2 {
+                        font-size: 20px;
+                        margin: 10px 0px;
+                    }
+                    p {
+                        font-size: 14px;
+                        margin-bottom: 5px;
+                    }
+                    img {
+                        margin: 10px 0px;
                     }
                 }
             }
