@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single</title>
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/header-footer.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/main-resp.css">
+</head>
+
+<body>
+    <header>
+        <div class="nav container1440 flex-row item-center justify-between">
+            <div class="left">Alin S.</div>
+            <div class="right">
+                <ul class="flex-row item-center">
+                    <li><a href="index.html">Home</a></li>
+                    <li onclick="scrollproj()">Projects</li>
+                    <li onclick="scrollcont()">Contact</li>
+                </ul>
+                <div class="hamburger flex-col item-stretch justify-between">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="single-page">
+        <section class="banner">
+            <div class="container1280 h-100">
+                <div class="outter-wrap flex-col item-start justify-end">
+                    <div class="inner-wrap">
+                        <h2>Logo design • 2018</h2>
+                        <h1>Money Game Podcast</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="content">
+            <div class="container1080">
+                <div class="wrap">
+                    <h2>Overview</h2>
+                    <p>Money Game is a podcast, hosted by Mark Natapatch, that dive deep into personal finance and
+                        investment while keep you entertained with the concept of gaming.
+                    </p>
+                    <img src="./assets/image/single-1.jpg" alt="">
+                    <img src="./assets/image/single-2.jpg" alt="">
+                    <img src="./assets/image/single-3.jpg" alt="">
+                    <img src="./assets/image/single-4.jpg" alt="">
+                    <h2>Inspiration</h2>
+                    <p>Financial management should be viewed as something everyone has control and it can be fun like
+                        playing game. Therefore, we use the controller of the Super Nintendo to represent the podcast's
+                        concept.</p>
+                    <img src="./assets/image/single-5.jpg" alt="">
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="wrap container1440 flex-row item-center justify-between">
+            <div class="left">Bangkok, Thailand</div>
+            <div class="link-wrap">
+                <ul class="flex-row item-center justify-start">
+                    <li><a class="flex-row item-center" href="#">LinkedIn</a></li>
+                    <li><a class="flex-row item-center" href="#">Medium</a></li>
+                    <li><a class="flex-row item-center" href="mailto:hello@alin.studio">Email</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    function scrollproj() {
+        let s1 = document.getElementById("project");
+        s1.scrollIntoView({
+            block: 'start',
+            behavior: 'smooth',
+            inline: 'start'
+        });
+    }
+
+    function scrollcont() {
+        let s2 = document.getElementById("contact");
+        s2.scrollIntoView({
+            block: 'start',
+            behavior: 'smooth',
+            inline: 'start'
+        });
+    }
+
+    $(window).scroll(function () {
+        var scroll = $(window).scrollTop();
+        if (scroll >= 100) {
+            $("header").addClass("animate");
+        } else {
+            $("header").removeClass("animate");
+        }
+    });
+</script>
+
+</html>
