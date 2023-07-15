@@ -1,0 +1,97 @@
+header {
+    height: auto;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    border-bottom: 1.2px solid var(--superlightwhite);
+    .nav {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+        .left {
+            font-family: "pr";
+            font-size: 16px;
+            color: var(--lightwhite);
+            cursor: default;
+        }
+        .right {
+            ul {
+                column-gap: 30px;
+                li {
+                    font-family: "pm";
+                    font-size: 16px;
+                    color: var(--lightwhite);
+                    cursor: pointer;
+                }
+            }
+            .hamburger {
+                display: none;
+                width: 18px;
+                height: 12px;
+                div {
+                    height: 2px;
+                    width: 100%;
+                    background-color: var(--lightwhite);
+                }
+            }
+        }
+    }
+}
+
+footer {
+    height: auto;
+    width: 100%;
+    border-top: 1.2px solid var(--superlightwhite);
+    .wrap {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        width: 100%;
+        height: 100%;
+        .left {
+            font-family: "pr";
+            font-size: 16px;
+            color: var(--lightwhite);
+        }
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    header {
+        .nav {
+            .left {
+            }
+            .right {
+                ul {
+                    display: none;
+                }
+                .hamburger {
+                    display: flex;
+                }
+            }
+        }
+    }
+    footer {
+        .wrap {
+            flex-direction: column;
+            align-items: flex-start;
+            row-gap: 20px;
+            padding-top: 25px;
+            padding-bottom: 25px;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    footer {
+        .wrap {
+            .left {
+                font-size: 14px;
+            }
+        }
+    }
+}
