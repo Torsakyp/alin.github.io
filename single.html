@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Single</title>
+    <link rel="icon" type="image/x-icon" href="./assets/image/favicon.svg">
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/header-footer.css">
     <link rel="stylesheet" href="./assets/css/main.css">
@@ -13,25 +14,21 @@
 
 <body>
     <header>
-        <div class="nav container1440 flex-row item-center justify-between">
-            <div class="left">Alin S.</div>
-            <div class="right">
+        <div class="nav container1440 flex-row item-center justify-start">
+            <div class="left single">
                 <ul class="flex-row item-center">
-                    <li><a href="index.html">Home</a></li>
-                    <li onclick="scrollproj()">Projects</li>
-                    <li onclick="scrollcont()">Contact</li>
+                    <a href="index.html">
+                        <li class="flex-row item-center"><img src="./assets/image/back-arrow.svg" alt="">
+                            <div>Back to Home</div>
+                        </li>
+                    </a>
                 </ul>
-                <div onclick="hamburger()" id="hamburger" class="hamburger flex-col item-stretch justify-between">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
             </div>
+            <div class="mid">ALIN</div>
         </div>
         <div id="menu" class="menu">
             <div class="wrap">
                 <ul class="flex-col item-center justify-center">
-                    <li onclick="closemenu();"><a href="index.html">Home</a></li>
                     <li onclick="scrollproj();closemenu();">Project</li>
                     <li onclick="scrollcont();closemenu();">Contact</li>
                 </ul>

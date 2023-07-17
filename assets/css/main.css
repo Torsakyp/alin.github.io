@@ -21,6 +21,10 @@ body.hidden {
   font-family: "pm";
   src: url(../fonts/Poppins-Medium.ttf);
 }
+@font-face {
+  font-family: "psb";
+  src: url(../fonts/Poppins-SemiBold.ttf);
+}
 .container1440 {
   max-width: 1520px;
   height: auto;
