@@ -107,7 +107,7 @@ body.hidden {
   height: 1px;
   display: block;
   background: white;
-  transition: 300ms;
+  transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
   position: absolute;
   bottom: -1px;
   opacity: 0;
@@ -123,11 +123,11 @@ body.hidden {
 }
 .link-wrap ul li:hover {
   opacity: 1;
-  transition: all 400ms ease-in-out;
+  transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 .link-wrap ul li:hover a::before {
   opacity: 1;
-  transition: all 400ms ease-in-out;
+  transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 .project-item {
@@ -148,6 +148,7 @@ body.hidden {
   z-index: -1;
   -o-object-position: center;
      object-position: center;
+  transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 .project-item .pre {
   z-index: 1;
@@ -168,23 +169,27 @@ body.hidden {
   height: 55px;
   border-radius: 100%;
   background-color: rgba(255, 255, 255, 0.2);
-  transition: all 300ms ease-in-out;
+  transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 .project-item .pre div:nth-child(2) img {
   width: 18px;
   height: 18px;
   -o-object-fit: contain;
      object-fit: contain;
-  transition: all 300ms ease-in-out;
+  transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
+.project-item:hover .project-img {
+  transform: scale(1.1);
+  transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
 .project-item:hover .pre div:nth-child(2) {
   transform: scale(1.1);
-  transition: all 300ms ease-in-out;
+  transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 .project-item:hover .pre div:nth-child(2) img {
   transform: scale(1.1);
-  transition: all 300ms ease-in-out;
+  transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 .front-page .banner {
@@ -264,11 +269,11 @@ body.hidden {
   bottom: 0;
   left: 0;
   opacity: 0;
-  transition: all 300ms ease-in-out;
+  transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 .front-page .showcase .container1440 .wrap .scroll .RightToLeft a:hover::after {
   opacity: 1;
-  transition: all 300ms ease-in-out;
+  transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 .front-page .showcase .container1440 .wrap .scroll:hover .RightToLeft {
   animation-play-state: paused;
